@@ -8,20 +8,33 @@ body {
   font-weight: 800;
 }
 
-.small-para {
-  font-size: 14px;
-  font-weight: 800;
-}
-
+/* Moved the selector higher to prevent overwriting of the .small-para property
+through the last-defined specificity rule */
 .para {
   font-size: 22px;
 }
 
+
+.small-para {
+  font-size: 14px;
+  /* font-weight: 800; Exclude this because it's stated above */
+}
+
+/* .para {
+  font-size: 22px;
+} */
+
 .confirm {
-  background: green;
+  
   color: white;
   font-weight: bold;
 } 
+
+#confirm-button {
+  background: green;
+  color: white;
+  font-weight: bold;
+}
 
 .button {
   background-color: rgb(255, 255, 255);
@@ -29,14 +42,27 @@ body {
   font-size: 20px;
 }
 
-.child {
-  color: rgb(0, 0, 0);
-  font-weight: 800;
-  font-size: 14px;
-}
-
-div.text {
+/* div.text {
   color: rgb(0, 0, 0);
   font-size: 22px;
   font-weight: 100;
+} */
+
+/* Added the Grouping selector for the identical color property. */
+.child, .text {
+  color: rgb(0, 0, 0);
+}
+
+/* With div.text chaining, it had a higher speciicty than the .child value. Hence 
+chaining of div was removed to allow .child class's font-size to appear. */
+.text {
+  /* color: rgb(0, 0, 0); */
+  font-size: 22px;
+  font-weight: 100;
+}
+
+.child {
+  /* color: rgb(0, 0, 0); */
+  font-weight: 800;
+  font-size: 14px;
 }
