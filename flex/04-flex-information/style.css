@@ -24,3 +24,30 @@ img {
   justify-content: center;
   background: #eee;
 }
+
+/*Starts here!*/
+
+.title {
+  text-align: center;
+}
+
+.container {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 52px;
+}
+
+.size {
+  width: 200px;
+}
+
+.text {
+  text-align: center;
+}
+
+/*Adjust strange misalignment on third item. DOesn't seem to be an issue on the solution. */
+.three {
+  align-self: start;
+}
