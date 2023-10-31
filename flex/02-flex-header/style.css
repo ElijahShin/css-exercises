@@ -1,3 +1,4 @@
+
 .header  {
   font-family: monospace;
   background: papayawhip;
@@ -24,9 +25,8 @@ a {
   text-decoration: none;
 }
 
-/* Start here */
+/* Started here */
 .header {
-  width: 100%;
   display: flex;
   justify-content: space-around;
 }
@@ -34,18 +34,15 @@ a {
 .left-links,
 .right-links {
   display: flex;
+
 }
 
 ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  /* ul Reset */
   margin: 0px;
   padding: 0px;
-
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-li {
-  display: flex;
-  flex: 1;
 }
